@@ -36,12 +36,32 @@ void Draw()
 	system("cls");
 
 	// Making Top Border
-	for (int i = 0; i < width; i++)
+	for (int i = 0; i < width + 2; i++)
 		cout << "#";
 	cout << endl;
 
+
+	for (int i = 0; i < height; i++)
+	{
+		for (int j = 0; j < width; j++)
+		{
+			// Making Left Border
+			if (j == 0)
+				cout << "#";
+
+			cout << " ";
+
+			// Making Right Border
+			if (j == (width - 1))
+				cout << "#";
+		}
+
+		cout << endl;
+	}
+
+
 	// Making Bottom Border
-	for (int i = 0; i < width; i++)
+	for (int i = 0; i < width + 2; i++)
 		cout << "#";
 	cout << endl;
 }
