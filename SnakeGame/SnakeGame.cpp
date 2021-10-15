@@ -127,6 +127,7 @@ void Logic()
 	//if (x > width || x < 0 || y > height || y < 0)
 	//  gameOver = true;
 
+	// Eating fruit
 	if (x == fruitX && y == fruitY)
 	{
 		score += 10;
