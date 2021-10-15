@@ -114,6 +114,20 @@ void Input()
 
 void Logic()
 {
+	int prevX = tailX[0];
+	int prevY = tailY[0];
+	int prev2X, prev2Y;
+
+	for (int i = 1; i < nTail; i++)
+	{
+		prev2X = tailX[i];
+		prev2Y = tailY[i];
+		tailX[i] = prevX;
+		tailY[i] = prevY;
+		prevX = prev2X;
+		prevY = prev2Y;
+	}
+
 	// Basic movement
 	switch (dir)
 	{
@@ -143,6 +157,7 @@ void Logic()
 		score += 10;
 		fruitX = rand() % width;
 		fruitY = rand() % height;
+		nTail++;
 	}
 }
 
