@@ -33,7 +33,17 @@ void Setup()
 
 void Draw()
 {
+	system("cls");
 
+	// Making Top Border
+	for (int i = 0; i < width; i++)
+		cout << "#";
+	cout << endl;
+
+	// Making Bottom Border
+	for (int i = 0; i < width; i++)
+		cout << "#";
+	cout << endl;
 }
 
 void Input()
