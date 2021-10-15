@@ -18,11 +18,16 @@ eDirecton dir;
 void Setup()
 {
 	gameOver = false;
+
+	// Setting player's start direction and position
 	dir = STOP;
 	x = width / 2;
 	y = height / 2;
+
+	// Setting fruit's start position
 	fruitX = rand() % width;
 	fruitY = rand() % height;
+
 	score = 0;
 }
 
