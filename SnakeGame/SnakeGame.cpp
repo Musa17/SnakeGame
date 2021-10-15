@@ -73,6 +73,8 @@ void Draw()
 	for (int i = 0; i < width + 2; i++)
 		cout << "#";
 	cout << endl;
+
+	cout << "Score:" << score << endl;
 }
 
 void Input()
@@ -102,6 +104,7 @@ void Input()
 
 void Logic()
 {
+	// Basic movement
 	switch (dir)
 	{
 	case LEFT:
@@ -118,6 +121,17 @@ void Logic()
 		break;
 	default:
 		break;
+	}
+
+	// Game Over when player's head touch borders
+	//if (x > width || x < 0 || y > height || y < 0)
+	//  gameOver = true;
+
+	if (x == fruitX && y == fruitY)
+	{
+		score += 10;
+		fruitX = rand() % width;
+		fruitY = rand() % height;
 	}
 }
 
