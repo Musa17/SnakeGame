@@ -9,11 +9,19 @@
 using namespace std;
 
 bool gameOver;
+
+// Size of the field
 const int width = 20;
 const int height = 20;
+
+// Position of player and fruit
 int x, y, fruitX, fruitY, score;
+
+// Tail
 int tailX[100], tailY[100];
 int nTail;
+
+// Direction
 enum eDirecton { STOP = 0, LEFT, RIGHT, UP, DOWN };
 eDirecton dir;
 
