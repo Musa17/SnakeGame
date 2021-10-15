@@ -3,10 +3,34 @@
 
 #include "pch.h"
 #include <iostream>
+#include <conio.h>
+#include <windows.h>
+
+using namespace std;
+
+void Setup()
+{
+
+}
+
+void Draw()
+{
+
+}
+
+void Input()
+{
+
+}
+
+void Logic()
+{
+
+}
 
 int main()
 {
-    std::cout << "Hello World!\n"; 
+	
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
