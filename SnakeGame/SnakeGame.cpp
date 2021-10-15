@@ -8,9 +8,11 @@
 
 using namespace std;
 
+bool gameOver;
+
 void Setup()
 {
-
+	gameOver = false;
 }
 
 void Draw()
@@ -30,7 +32,13 @@ void Logic()
 
 int main()
 {
-	
+	Setup();
+	while (!gameOver)
+	{
+		Draw();
+		Input();
+		Logic();
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
