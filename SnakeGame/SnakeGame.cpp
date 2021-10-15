@@ -67,8 +67,22 @@ void Draw()
 				cout << "F";
 			}
 
+			// Drawing tail
 			else
-				cout << " ";
+			{
+				bool print = false;
+				for (int k = 0; k < nTail; k++)
+				{
+					if (tailX[k] == j && tailY[k] == i)
+					{
+						cout << "o";
+						print = true;
+					}
+				}
+
+				if (!print)
+					cout << " ";
+			}
 
 			// Making Right Border
 			if (j == (width - 1))
@@ -117,6 +131,9 @@ void Logic()
 	int prevX = tailX[0];
 	int prevY = tailY[0];
 	int prev2X, prev2Y;
+
+	tailX[0] = x;
+	tailY[0] = y;
 
 	for (int i = 1; i < nTail; i++)
 	{
